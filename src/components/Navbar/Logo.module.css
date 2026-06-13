@@ -1,0 +1,24 @@
+.logo {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    color: inherit;
+}
+
+.logo span {
+    font-size: 1.7rem;
+    font-family: var(--font-heading);
+    letter-spacing: .18em;
+    font-weight: 700;
+}
+
+.logo small {
+    font-size: .65rem;
+    opacity: .8;
+    letter-spacing: .28em;
+    margin-top: 2px;
+}
+
+.scrolledLogo {
+    color: var(--color-primary);
+}

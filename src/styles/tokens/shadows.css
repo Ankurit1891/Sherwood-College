@@ -1,0 +1,15 @@
+:root {
+  --shadow-xs: 0 2px 4px rgba(0,0,0,.05);
+
+  --shadow-sm: 0 6px 12px rgba(0,0,0,.08);
+
+  --shadow-md: 0 12px 24px rgba(0,0,0,.10);
+
+  --shadow-lg: 0 20px 40px rgba(0,0,0,.15);
+
+  --shadow-xl: 0 32px 64px rgba(0,0,0,.20);
+
+  --shadow-gold: 0 10px 35px rgba(212,175,55,.25);
+
+  --shadow-glass: 0 8px 32px rgba(31,38,135,.15);
+}

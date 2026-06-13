@@ -1,0 +1,64 @@
+:root {
+  /* ===== Brand Colors ===== */
+  --color-primary: #1b4332;
+  --color-primary-dark: #143126;
+  --color-primary-light: #2d6a4f;
+
+  --color-secondary: #c6a15b;
+  --color-secondary-light: #d8b97a;
+  --color-secondary-dark: #a07d3d;
+
+  /* ===== Backgrounds ===== */
+  --color-background: #f8f6f2;
+  --color-background-alt: #f1ede5;
+  --color-surface: #ffffff;
+  --color-surface-dark: #f4f4f4;
+
+  /* ===== Text ===== */
+  --color-text: #1f2937;
+  --color-text-light: #4b5563;
+  --color-text-muted: #6b7280;
+  --color-text-inverse: #ffffff;
+
+  /* ===== Borders ===== */
+  --color-border: #d6d3d1;
+  --color-border-light: #ececec;
+
+  /* ===== Status ===== */
+  --color-success: #2e7d32;
+  --color-warning: #ff9800;
+  --color-error: #d32f2f;
+  --color-info: #1976d2;
+
+  /* ===== Luxury Accent ===== */
+  --color-gold: #d4af37;
+  --color-gold-light: #edd27a;
+  --color-gold-dark: #a67c00;
+
+  /* ===== Overlay ===== */
+  --color-overlay-dark: rgba(0, 0, 0, 0.65);
+  --color-overlay-light: rgba(255, 255, 255, 0.75);
+
+  /* ===== Glass ===== */
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.2);
+
+  /* ===== Gradients ===== */
+  --gradient-primary: linear-gradient(
+    135deg,
+    #1b4332 0%,
+    #2d6a4f 100%
+  );
+
+  --gradient-gold: linear-gradient(
+    135deg,
+    #d4af37 0%,
+    #f3d47b 100%
+  );
+
+  --gradient-hero: linear-gradient(
+    180deg,
+    rgba(0,0,0,.25),
+    rgba(0,0,0,.75)
+  );
+}

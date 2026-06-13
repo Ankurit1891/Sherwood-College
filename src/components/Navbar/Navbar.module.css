@@ -1,0 +1,163 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: var(--z-header);
+
+  transition: all .4s ease;
+
+  padding: 24px 0;
+
+  background: transparent;
+}
+
+.scrolled {
+  padding: 14px 0;
+
+  background: rgba(255,255,255,.82);
+
+  backdrop-filter: blur(18px);
+
+  -webkit-backdrop-filter: blur(18px);
+
+  box-shadow: 0 12px 40px rgba(0,0,0,.08);
+}
+
+.container{
+    width:min(92%,1440px);
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.desktopNav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:34px;
+}
+
+.navItem{
+
+    position:relative;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    transition:.35s;
+}
+
+.scrolled .navItem{
+
+    color:var(--color-primary);
+}
+
+.navItem:hover{
+
+    color:var(--color-secondary);
+}
+
+.navItem::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--color-secondary);
+
+    transition:.35s;
+}
+
+.navItem:hover::after{
+
+    width:100%;
+}
+
+.active{
+
+    color:var(--color-secondary);
+}
+
+.active::after{
+
+    width:100%;
+}
+
+.actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+}
+
+.menuButton{
+
+    display:none;
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    color:white;
+
+    transition:.3s;
+}
+
+.scrolled .menuButton{
+
+    color:var(--color-primary);
+}
+
+.menuButton:hover{
+
+    transform:rotate(90deg);
+}
+
+@media(max-width:1200px){
+
+.desktopNav{
+
+display:none;
+
+}
+
+.menuButton{
+
+display:grid;
+
+place-items:center;
+
+}
+
+}

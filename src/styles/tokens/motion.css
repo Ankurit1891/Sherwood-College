@@ -1,0 +1,22 @@
+:root {
+  /* Durations */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-medium: 500ms;
+  --duration-slow: 700ms;
+  --duration-extra: 1000ms;
+
+  /* Easings */
+  --ease-default: cubic-bezier(.4,0,.2,1);
+  --ease-smooth: cubic-bezier(.22,1,.36,1);
+  --ease-bounce: cubic-bezier(.68,-0.6,.32,1.6);
+
+  /* Transitions */
+  --transition-default:
+    all var(--duration-normal)
+    var(--ease-default);
+
+  --transition-smooth:
+    all var(--duration-medium)
+    var(--ease-smooth);
+}
