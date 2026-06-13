@@ -8,22 +8,24 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={styles.overlay} />
 
-      <div className={styles.backgroundPlaceholder}>
-        <span>Hero Image Placeholder</span>
-      </div>
+      <img
+        src="/images/drone-shot/DroneShotImage.jpg"
+        alt="Sherwood College Campus"
+        className={styles.background}
+      />
 
       <div className={styles.content}>
-        <span className={styles.tag}>ESTABLISHED 1869</span>
+        <span className={styles.tag}>ESTABLISHED • NAINITAL • 1869</span>
 
         <h1>
           Where Heritage
           <br />
-          Inspires Excellence
+          Meets <span>Excellence</span>
         </h1>
 
         <p>
-          A timeless institution nestled in the Himalayas, shaping leaders through academic
-          excellence, character and tradition.
+          Nestled in the heart of Nainital, Sherwood College has inspired generations through
+          academic excellence, character, leadership, and a timeless boarding tradition since 1869.
         </p>
 
         <div className={styles.actions}>
