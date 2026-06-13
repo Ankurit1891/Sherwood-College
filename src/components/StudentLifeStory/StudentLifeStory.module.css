@@ -1,0 +1,141 @@
+.section {
+  padding: 160px 6%;
+  background: #f9f7f2;
+}
+
+.header {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 120px;
+}
+
+.header span {
+  color: #d4af37;
+  letter-spacing: 0.25em;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.header h2 {
+  margin: 20px 0;
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  line-height: 1.05;
+  color: #123524;
+}
+
+.header p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #666;
+}
+
+.story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  margin-bottom: 140px;
+}
+
+.reverse {
+  direction: rtl;
+}
+
+.reverse > * {
+  direction: ltr;
+}
+
+.image {
+  height: 560px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.12);
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #123524, #5b1625);
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+.placeholder h3 {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+.placeholder small {
+  opacity: 0.75;
+  line-height: 1.8;
+}
+
+.content span {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #d4af37;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.content h3 {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  margin-bottom: 25px;
+  color: #123524;
+}
+
+.content p {
+  font-size: 1.08rem;
+  line-height: 1.9;
+  color: #666;
+  margin-bottom: 35px;
+}
+
+.content button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #5b1625;
+  transition: 0.3s;
+}
+
+.content button:hover {
+  gap: 18px;
+}
+
+@media (max-width: 1000px) {
+  .story {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .reverse {
+    direction: ltr;
+  }
+
+  .image {
+    height: 420px;
+  }
+
+  .header h2 {
+    font-size: 3rem;
+  }
+
+  .content h3 {
+    font-size: 2.4rem;
+  }
+}

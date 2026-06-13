@@ -5,6 +5,7 @@ import HeritageTimeline from '@/components/HeritageTimeline';
 import AcademicsSection from '@/components/AcademicsSection';
 import CampusExperience from '@/components/CampusExperience';
 import AcademicExcellence from '@/components/AcademicExcellence';
+import StudentLifeStory from '@/components/StudentLifeStory';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <AboutSection />
       <CampusExperience />
       <AcademicExcellence />
+      <StudentLifeStory />
       <HeritageTimeline />
       <AcademicsSection />
     </>
