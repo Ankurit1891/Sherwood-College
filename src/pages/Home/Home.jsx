@@ -3,6 +3,8 @@ import Stats from '@/components/Stats';
 import AboutSection from '@/components/AboutSection';
 import HeritageTimeline from '@/components/HeritageTimeline';
 import AcademicsSection from '@/components/AcademicsSection';
+import CampusExperience from '@/components/CampusExperience';
+import AcademicExcellence from '@/components/AcademicExcellence';
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
       <Hero />
       <Stats />
       <AboutSection />
+      <CampusExperience />
+      <AcademicExcellence />
       <HeritageTimeline />
       <AcademicsSection />
     </>

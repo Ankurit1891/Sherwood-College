@@ -1,0 +1,114 @@
+.section {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 80px;
+  padding: 160px 6%;
+  background: #fff;
+  align-items: start;
+}
+
+.left {
+  position: sticky;
+  top: 120px;
+}
+
+.tag {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #d4af37;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.left h2 {
+  font-family: var(--font-heading);
+  font-size: 4.5rem;
+  line-height: 1;
+  color: #123524;
+  margin-bottom: 30px;
+}
+
+.left h2 span {
+  color: #5b1625;
+  font-style: italic;
+}
+
+.left p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #666;
+  max-width: 520px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card {
+  display: flex;
+  gap: 28px;
+  padding: 40px;
+  border-radius: 28px;
+  background: #faf8f3;
+  transition: 0.35s;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.card:hover {
+  transform: translateX(12px);
+  border-color: #d4af37;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+.icon {
+  width: 74px;
+  height: 74px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: #123524;
+  color: white;
+  flex-shrink: 0;
+}
+
+.card h3 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #123524;
+}
+
+.card p {
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 22px;
+}
+
+.card button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #5b1625;
+}
+
+@media (max-width: 1100px) {
+  .section {
+    grid-template-columns: 1fr;
+  }
+
+  .left {
+    position: relative;
+    top: 0;
+  }
+
+  .left h2 {
+    font-size: 3.2rem;
+  }
+}
