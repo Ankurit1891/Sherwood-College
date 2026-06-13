@@ -1,24 +1,62 @@
 .logo {
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: inherit;
 }
 
-.logo span {
-    font-size: 1.7rem;
-    font-family: var(--font-heading);
-    letter-spacing: .18em;
-    font-weight: 700;
+.logoImage {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: 0.35s ease;
 }
 
-.logo small {
-    font-size: .65rem;
-    opacity: .8;
-    letter-spacing: .28em;
-    margin-top: 2px;
+.logo:hover .logoImage {
+  transform: rotate(-5deg) scale(1.06);
 }
 
-.scrolledLogo {
-    color: var(--color-primary);
+.logoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoText span {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: white;
+}
+
+.logoText small {
+  margin-top: 2px;
+  font-size: 0.68rem;
+  letter-spacing: 0.28em;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+:global(.scrolled) .logoText span {
+  color: var(--color-primary);
+}
+
+:global(.scrolled) .logoText small {
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .logoImage {
+    width: 48px;
+    height: 48px;
+  }
+
+  .logoText span {
+    font-size: 1.15rem;
+  }
+
+  .logoText small {
+    display: none;
+  }
 }

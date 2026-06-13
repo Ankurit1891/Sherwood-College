@@ -1,7 +1,11 @@
-import AppRoutes from "@/routes/AppRoutes";
+import Loader from '@/components/Loader';
+import AppRoutes from '@/routes/AppRoutes';
 
-function App() {
-  return <AppRoutes />;
+export default function App() {
+  return (
+    <>
+      <Loader />
+      <AppRoutes />
+    </>
+  );
 }
-
-export default App; 
