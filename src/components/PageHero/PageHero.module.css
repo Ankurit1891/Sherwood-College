@@ -1,0 +1,49 @@
+.hero {
+  min-height: 60vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background-size: cover;
+
+  background-position: center;
+
+  text-align: center;
+
+  padding: 120px 6%;
+}
+
+.content {
+  max-width: 900px;
+}
+
+.content span {
+  color: #c8a96a;
+
+  letter-spacing: 0.3rem;
+
+  font-size: 0.8rem;
+
+  font-weight: 700;
+}
+
+.content h1 {
+  margin: 20px 0;
+
+  font-size: clamp(3rem, 7vw, 5.5rem);
+
+  color: white;
+
+  font-family: var(--font-heading);
+}
+
+.content p {
+  color: rgba(255, 255, 255, 0.8);
+
+  line-height: 1.8;
+
+  font-size: 1.1rem;
+}
