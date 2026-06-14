@@ -9,13 +9,15 @@ export default function Testimonials() {
 
         <h2>Voices of Sherwood</h2>
 
-        <p>Generations of students and parents continue to celebrate the Sherwood experience.</p>
+        <p>
+          Generations of students, parents and alumni continue to celebrate the Sherwood experience.
+        </p>
       </div>
 
       <div className={styles.grid}>
         {testimonials.map(item => (
           <article key={item.name} className={styles.card}>
-            <div className={styles.quote}>"</div>
+            <div className={styles.quote}>“</div>
 
             <p>{item.quote}</p>
 

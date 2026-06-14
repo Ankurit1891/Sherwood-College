@@ -6,6 +6,10 @@ import AcademicsSection from '@/components/AcademicsSection';
 import CampusExperience from '@/components/CampusExperience';
 import AcademicExcellence from '@/components/AcademicExcellence';
 import StudentLifeStory from '@/components/StudentLifeStory';
+import Achievements from '@/components/Achievements';
+import GalleryPreview from '@/components/GalleryPreview';
+import Testimonials from '@/components/Testimonials';
+import AdmissionsCTA from '@/components/AdmissionsCTA';
 
 export default function Home() {
   return (
@@ -16,6 +20,10 @@ export default function Home() {
       <CampusExperience />
       <AcademicExcellence />
       <StudentLifeStory />
+      <Achievements />
+      <GalleryPreview />
+      <Testimonials />
+      <AdmissionsCTA />
       <HeritageTimeline />
       <AcademicsSection />
     </>

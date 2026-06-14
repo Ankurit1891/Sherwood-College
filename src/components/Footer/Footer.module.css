@@ -1,0 +1,217 @@
+.footer {
+  position: relative;
+  overflow: hidden;
+  padding: 120px 6% 40px;
+  background: #07130e;
+  color: white;
+}
+
+.glow {
+  position: absolute;
+
+  top: -300px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 900px;
+
+  height: 900px;
+
+  background: radial-gradient(circle, rgba(200, 169, 106, 0.12), transparent 70%);
+
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+
+  max-width: 1300px;
+
+  margin: auto;
+
+  text-align: center;
+
+  z-index: 2;
+}
+
+.logo {
+  width: 95px;
+
+  margin: auto;
+
+  margin-bottom: 25px;
+
+  display: block;
+}
+
+.container h2 {
+  font-family: var(--font-heading);
+
+  font-size: 2.6rem;
+
+  letter-spacing: 0.35rem;
+
+  margin-bottom: 12px;
+}
+
+.tagline {
+  color: #c8a96a;
+
+  letter-spacing: 0.35rem;
+
+  margin-bottom: 40px;
+
+  font-size: 0.9rem;
+}
+
+.line {
+  width: 140px;
+
+  height: 2px;
+
+  background: #c8a96a;
+
+  margin: auto;
+
+  margin-bottom: 55px;
+}
+
+.links {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 45px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 55px;
+}
+
+.links a {
+  text-decoration: none;
+
+  color: white;
+
+  transition: 0.35s;
+}
+
+.links a:hover {
+  color: #c8a96a;
+}
+
+.socials {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 18px;
+
+  margin-bottom: 60px;
+}
+
+.socials a {
+  width: 48px;
+
+  height: 48px;
+
+  display: grid;
+
+  place-items: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  color: white;
+
+  transition: 0.35s;
+}
+
+.socials a:hover {
+  background: #c8a96a;
+
+  color: #07130e;
+
+  transform: translateY(-6px);
+}
+
+.top {
+  margin: auto;
+
+  margin-bottom: 60px;
+
+  display: grid;
+
+  place-items: center;
+
+  width: 56px;
+
+  height: 56px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  background: #c8a96a;
+
+  transition: 0.35s;
+}
+
+.top:hover {
+  transform: translateY(-8px);
+}
+
+.signature {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+
+  padding-top: 35px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  font-size: 0.9rem;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.signature a {
+  text-decoration: none;
+
+  color: #c8a96a;
+
+  font-weight: 600;
+}
+
+.signature a:hover {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .container h2 {
+    font-size: 1.8rem;
+
+    letter-spacing: 0.15rem;
+  }
+
+  .links {
+    gap: 20px;
+  }
+
+  .signature {
+    flex-direction: column;
+
+    text-align: center;
+  }
+}
