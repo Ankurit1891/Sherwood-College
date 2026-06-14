@@ -26,7 +26,7 @@ const cards = [
 
 export default function AcademicsSection() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="academics-detail">
       <div className={styles.heading}>
         <span>ACADEMICS</span>
 

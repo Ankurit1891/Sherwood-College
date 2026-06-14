@@ -4,7 +4,7 @@ import { campusExperience } from '@/data/campusExperience';
 
 export default function CampusExperience() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="campus">
       <div className={styles.heading}>
         <span>CAMPUS EXPERIENCE</span>
 

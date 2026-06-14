@@ -10,11 +10,13 @@ import Achievements from '@/components/Achievements';
 import GalleryPreview from '@/components/GalleryPreview';
 import Testimonials from '@/components/Testimonials';
 import AdmissionsCTA from '@/components/AdmissionsCTA';
+// import Journey from '@/components/Journey';
 
 export default function Home() {
   return (
     <>
       <Hero />
+      {/* <Journey /> */}
       <Stats />
       <AboutSection />
       <CampusExperience />

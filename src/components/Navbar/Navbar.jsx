@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { useEffect, useState } from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import { Menu } from 'lucide-react';
 
-import styles from "./Navbar.module.css";
-import Logo from "./Logo";
-import MobileMenu from "./MobileMenu";
-import Button from "@/components/Button";
-import navbarLinks from "@/data/navbar";
+import styles from './Navbar.module.css';
+
+import Logo from './Logo';
+import MobileMenu from './MobileMenu';
+import Button from '@/components/Button';
+import navigation from '@/data/navigation';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,37 +18,31 @@ export default function Navbar() {
       setIsScrolled(window.scrollY > 40);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = mobileOpen ? "hidden" : "auto";
+    document.body.style.overflow = mobileOpen ? 'hidden' : 'auto';
   }, [mobileOpen]);
 
   return (
     <>
-      <header
-        className={`${styles.navbar} ${
-          isScrolled ? styles.scrolled : ""
-        }`}
-      >
+      <header className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
         <div className={styles.container}>
-          <Logo />
+          <Link to="/" className={styles.logoLink}>
+            <Logo />
+          </Link>
 
           <nav className={styles.desktopNav}>
-            {navbarLinks.map(link => (
+            {navigation.map(item => (
               <NavLink
-                key={link.path}
-                to={link.path}
-                className={({ isActive }) =>
-                  `${styles.navItem} ${
-                    isActive ? styles.active : ""
-                  }`
-                }
+                key={item.path}
+                to={item.path}
+                className={({ isActive }) => `${styles.navItem} ${isActive ? styles.active : ''}`}
               >
-                {link.label}
+                {item.label}
               </NavLink>
             ))}
           </nav>
@@ -60,16 +55,13 @@ export default function Navbar() {
               onClick={() => setMobileOpen(true)}
               aria-label="Open Menu"
             >
-              <Menu size={28} />
+              <Menu size={26} />
             </button>
           </div>
         </div>
       </header>
 
-      <MobileMenu
-        open={mobileOpen}
-        onClose={() => setMobileOpen(false)}
-      />
+      <MobileMenu open={mobileOpen} onClose={() => setMobileOpen(false)} />
     </>
   );
 }

@@ -4,7 +4,7 @@ import { studentLifeStory } from '@/data/studentLifeStory';
 
 export default function StudentLifeStory() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="student-life">
       <div className={styles.header}>
         <span>STUDENT LIFE</span>
 

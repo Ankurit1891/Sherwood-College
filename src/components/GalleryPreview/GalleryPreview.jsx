@@ -4,7 +4,7 @@ import { galleryPreview } from '@/data/galleryPreview';
 
 export default function GalleryPreview() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="gallery">
       <div className={styles.header}>
         <span>GALLERY</span>
 

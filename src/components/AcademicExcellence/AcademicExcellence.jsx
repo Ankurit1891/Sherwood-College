@@ -27,7 +27,7 @@ const academics = [
 
 export default function AcademicExcellence() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="academics">
       <div className={styles.left}>
         <span className={styles.tag}>ACADEMIC EXCELLENCE</span>
 

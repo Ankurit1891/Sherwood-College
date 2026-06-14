@@ -25,7 +25,7 @@ const timeline = [
 
 export default function HeritageTimeline() {
   return (
-    <section className={styles.timelineSection}>
+    <section className={styles.timelineSection} id="heritage">
       <div className={styles.heading}>
         <span>OUR HERITAGE</span>
         <h2>A Journey Through Time</h2>

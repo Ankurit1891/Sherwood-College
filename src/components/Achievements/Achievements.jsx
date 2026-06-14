@@ -3,7 +3,7 @@ import { achievements } from '@/data/achievements';
 
 export default function Achievements() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="achievements">
       <div className={styles.header}>
         <span>ACHIEVEMENTS</span>
 

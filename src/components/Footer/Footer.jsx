@@ -1,5 +1,5 @@
 import { ArrowUp } from 'lucide-react';
-
+import { NavLink } from 'react-router-dom';
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 
 import { MdEmail } from 'react-icons/md';
@@ -27,11 +27,11 @@ export default function Footer() {
         <div className={styles.line}></div>
 
         <nav className={styles.links}>
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="/academics">Academics</a>
-          <a href="/gallery">Gallery</a>
-          <a href="/contact">Contact</a>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/academics">Academics</NavLink>
+          <NavLink to="/gallery">Gallery</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
         </nav>
 
         <div className={styles.socials}>

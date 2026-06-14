@@ -3,7 +3,7 @@ import Button from '@/components/Button';
 
 export default function AdmissionsCTA() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="admissions">
       <div className={styles.overlay}></div>
 
       <div className={styles.content}>

@@ -3,7 +3,7 @@ import { testimonials } from '@/data/testimonials';
 
 export default function Testimonials() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="testimonials">
       <div className={styles.header}>
         <span>TESTIMONIALS</span>
 

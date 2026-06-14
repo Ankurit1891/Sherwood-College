@@ -12,7 +12,7 @@ import styles from './AboutSection.module.css';
 
 export default function AboutSection() {
   return (
-    <section className={styles.about}>
+    <section className={styles.about} id="about">
       <Container>
         <div className={styles.grid}>
           <div className={styles.left}>
