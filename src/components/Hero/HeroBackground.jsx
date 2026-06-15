@@ -22,7 +22,7 @@ export default function HeroBackground() {
   return (
     <>
       <div ref={backgroundRef} className={styles.background}>
-        <img src="/images/hero/drone.jpg" alt="Sherwood College" />
+        <img src="/images/drone-shot/DroneShotImage.jpg" alt="Sherwood College" />
       </div>
 
       <div className={styles.overlay} />

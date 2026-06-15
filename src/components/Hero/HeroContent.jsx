@@ -1,27 +1,27 @@
 import styles from './Hero.module.css';
-
 import HeroButtons from './HeroButtons';
-import HeroStats from './HeroStats';
 
 export default function HeroContent() {
   return (
-    <div className={styles.content}>
-      <span className={styles.badge}>ESTABLISHED • 1869</span>
+    <div className={styles.content} data-content>
+      <span className={styles.tag} data-badge>
+        ESTABLISHED • NAINITAL • 1869
+      </span>
 
-      <h1>
+      <h1 data-title>
         Where Heritage
         <br />
-        Meets Excellence
+        Meets <span>Excellence</span>
       </h1>
 
-      <p>
-        A premium digital experience inspired by over 150 years of tradition, leadership and
-        academic excellence.
+      <p data-description>
+        Nestled in the heart of Nainital, Sherwood College has inspired generations through academic
+        excellence, leadership and character since 1869.
       </p>
 
-      <HeroButtons />
-
-      <HeroStats />
+      <div data-buttons>
+        <HeroButtons />
+      </div>
     </div>
   );
 }

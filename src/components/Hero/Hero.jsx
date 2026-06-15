@@ -1,43 +1,30 @@
+import { useEffect, useRef } from 'react';
 import styles from './Hero.module.css';
-import Button from '@/components/Button';
-// import HeroStats from "./HeroStats";
-// import HeroScroll from "./HeroScroll";
+import { initHeroAnimation } from './HeroAnimations';
+import HeroScroll from './HeroScroll';
+
+import HeroBackground from './HeroBackground';
+import HeroContent from './HeroContent';
+import HeroStats from './HeroStats';
 
 export default function Hero() {
+  const heroRef = useRef(null);
+
+  useEffect(() => {
+    initHeroAnimation(heroRef.current);
+  }, []);
+
   return (
-    <section className={styles.hero} id="hero">
-      <div className={styles.overlay} />
+    <section ref={heroRef} id="hero" className={styles.hero}>
+      <HeroBackground />
 
-      <img
-        src="/images/drone-shot/DroneShotImage.jpg"
-        alt="Sherwood College Campus"
-        className={styles.background}
-      />
+      <HeroContent />
 
-      <div className={styles.content}>
-        <span className={styles.tag}>ESTABLISHED • NAINITAL • 1869</span>
-
-        <h1>
-          Where Heritage
-          <br />
-          Meets <span>Excellence</span>
-        </h1>
-
-        <p>
-          Nestled in the heart of Nainital, Sherwood College has inspired generations through
-          academic excellence, character, leadership, and a timeless boarding tradition since 1869.
-        </p>
-
-        <div className={styles.actions}>
-          <Button>Explore Campus</Button>
-
-          <Button variant="outline">Admissions</Button>
-        </div>
+      <div data-stats>
+        <HeroStats />
       </div>
 
-      {/* <HeroStats /> */}
-
-      {/* <HeroScroll /> */}
+      <HeroScroll />
     </section>
   );
 }

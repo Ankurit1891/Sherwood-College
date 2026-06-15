@@ -1,16 +1,20 @@
 .hero {
   position: relative;
+  min-height: 100vh;
+  padding: 120px 0 80px;
 
-  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   overflow: hidden;
 
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
+  background: #07130e;
 }
+
+/* ===========================
+   Background
+=========================== */
 
 .background {
   position: absolute;
@@ -24,105 +28,339 @@
 
   z-index: 0;
 
-  transform: scale(1.05);
-
-  transition: transform 8s ease;
+  animation: heroZoom 22s ease-in-out infinite alternate;
 }
 
-.hero:hover .background {
-  transform: scale(1.1);
+@keyframes heroZoom {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.12);
+  }
 }
+
+/* ===========================
+   Overlay
+=========================== */
 
 .overlay {
   position: absolute;
   inset: 0;
 
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.2) 0%,
-    rgba(0, 0, 0, 0.45) 45%,
-    rgba(0, 0, 0, 0.8) 100%
-  );
+  background:
+    radial-gradient(circle at top right, rgba(200, 169, 106, 0.18), transparent 40%),
+    linear-gradient(180deg, rgba(7, 19, 14, 0.15), rgba(7, 19, 14, 0.45), rgba(7, 19, 14, 0.88));
 
   z-index: 1;
 }
 
+/* ===========================
+   Content
+=========================== */
+
 .content {
   position: relative;
-
   z-index: 5;
 
-  width: min(90%, 1000px);
+  width: min(90%, 1400px);
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 
   color: white;
 
-  text-align: center;
+  text-align: left;
 }
 
+/* ===========================
+   Heritage Tag
+=========================== */
+
 .tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
 
-  padding: 10px 20px;
+  padding: 12px 22px;
 
-  border: 1px solid rgba(255, 255, 255, 0.3);
-
-  backdrop-filter: blur(12px);
+  margin-bottom: 35px;
 
   border-radius: 999px;
 
-  margin-bottom: 28px;
+  border: 1px solid rgba(200, 169, 106, 0.35);
+
+  background: rgba(255, 255, 255, 0.06);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  color: #c8a96a;
 
   font-size: 0.8rem;
 
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22rem;
+
+  text-transform: uppercase;
 }
+
+/* ===========================
+   Heading
+=========================== */
 
 .content h1 {
-  font-family: var(--font-heading);
-
-  font-size: clamp(3rem, 8vw, 6rem);
-
-  line-height: 1.05;
+  max-width: 900px;
 
   margin-bottom: 30px;
-  text-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(4rem, 8vw, 7rem);
+
+  line-height: 0.95;
+
+  letter-spacing: -0.03em;
+
+  text-shadow: 0 15px 45px rgba(0, 0, 0, 0.45);
 }
+
+.content h1 span {
+  color: #c8a96a;
+}
+
+/* ===========================
+   Description
+=========================== */
 
 .content p {
-  max-width: 700px;
+  max-width: 650px;
 
-  margin: auto;
+  margin-bottom: 45px;
 
-  font-size: 1.2rem;
+  font-size: 1.15rem;
 
-  line-height: 1.8;
+  line-height: 1.9;
 
-  opacity: 0.9;
-
-  margin-bottom: 42px;
+  color: rgba(255, 255, 255, 0.86);
 }
+
+/* ===========================
+   CTA Buttons
+=========================== */
 
 .actions {
   display: flex;
 
-  justify-content: center;
-
   gap: 20px;
 
   flex-wrap: wrap;
+
+  margin-top: 8px;
 }
+
+/* ===========================
+   Placeholder
+=========================== */
 
 .backgroundPlaceholder {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #123524, #5b1625);
+
   display: grid;
   place-items: center;
+
+  background: linear-gradient(135deg, #123524, #5b1625);
+
   color: white;
+
+  font-family: var(--font-heading);
+
   font-size: 2rem;
+}
+
+/* ===========================
+   Global Hero Transitions
+=========================== */
+
+.hero * {
+  transition:
+    color 0.35s ease,
+    transform 0.35s ease,
+    opacity 0.35s ease;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 1024px) {
+  .content h1 {
+    font-size: clamp(3.5rem, 8vw, 5.5rem);
+  }
+
+  .content p {
+    max-width: 560px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 120px 20px 80px;
+  }
+
+  .content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .content h1 {
+    font-size: 3.2rem;
+    line-height: 1.02;
+  }
+
+  .content p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .actions {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .tag {
+    font-size: 0.72rem;
+    letter-spacing: 0.15rem;
+  }
+}
+
+/* ===========================
+   Scroll Indicator
+=========================== */
+
+.scroll {
+  position: absolute;
+
+  bottom: 40px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 12px;
+
+  z-index: 10;
+}
+
+.mouse {
+  width: 28px;
+
+  height: 48px;
+
+  border: 2px solid rgba(255, 255, 255, 0.7);
+
+  border-radius: 20px;
+
+  display: flex;
+  justify-content: center;
+
+  padding-top: 8px;
+}
+
+.wheel {
+  width: 4px;
+
+  height: 8px;
+
+  border-radius: 999px;
+
+  background: #c8a96a;
+
+  animation: scrollWheel 2s infinite;
+}
+
+.scroll p {
+  color: rgba(255, 255, 255, 0.8);
+
+  font-size: 0.75rem;
+
+  letter-spacing: 0.25rem;
+
+  text-transform: uppercase;
+}
+
+@keyframes scrollWheel {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+/* ===========================
+   Hero Stats
+=========================== */
+
+.stats {
+  display: flex;
+
+  gap: 22px;
+
+  margin-top: 70px;
+
+  flex-wrap: wrap;
+}
+
+.stats > div {
+  min-width: 180px;
+
+  padding: 24px;
+
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: 0.35s;
+}
+
+.stats > div:hover {
+  transform: translateY(-8px);
+
+  border-color: #c8a96a;
+}
+
+.stats h3 {
+  font-size: 2.2rem;
+
+  color: #c8a96a;
+
+  margin-bottom: 10px;
+
   font-family: var(--font-heading);
 }
 
-.content h1 span {
-  color: var(--color-secondary);
+.stats span {
+  color: rgba(255, 255, 255, 0.8);
+
+  line-height: 1.6;
 }
