@@ -1,7 +1,8 @@
 import Container from '@/components/Container';
 import SectionHeading from '@/components/SectionHeading';
 import Button from '@/components/Button';
-
+import { useEffect } from 'react';
+import { fadeUp } from '@/animations';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade } from 'swiper/modules';
 import ImageGallery from '@/components/ImageGallery';
@@ -11,6 +12,9 @@ import 'swiper/css/effect-fade';
 import styles from './AboutSection.module.css';
 
 export default function AboutSection() {
+  useEffect(() => {
+    fadeUp('#about');
+  }, []);
   return (
     <section className={styles.about} id="about">
       <Container>

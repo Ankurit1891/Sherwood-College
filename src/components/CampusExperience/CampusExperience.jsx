@@ -1,8 +1,12 @@
 import styles from './CampusExperience.module.css';
 import { ArrowUpRight } from 'lucide-react';
 import { campusExperience } from '@/data/campusExperience';
-
+import { useEffect } from 'react';
+import { fadeUp } from '@/animations';
 export default function CampusExperience() {
+  useEffect(() => {
+    fadeUp('#campus');
+  }, []);
   return (
     <section className={styles.section} id="campus">
       <div className={styles.heading}>

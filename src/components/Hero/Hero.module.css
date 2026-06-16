@@ -10,6 +10,7 @@
   overflow: hidden;
 
   background: #07130e;
+  cursor: default;
 }
 
 /* ===========================
@@ -28,7 +29,13 @@
 
   z-index: 0;
 
-  animation: heroZoom 22s ease-in-out infinite alternate;
+  transform: scale(1.12);
+
+  will-change: transform;
+
+  transition: transform 0.25s ease-out;
+
+  animation: heroZoom 25s ease-in-out infinite alternate;
 }
 
 @keyframes heroZoom {

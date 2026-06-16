@@ -1,7 +1,12 @@
 import styles from './Achievements.module.css';
 import { achievements } from '@/data/achievements';
+import { useEffect } from 'react';
+import { fadeUp } from '@/animations';
 
 export default function Achievements() {
+  useEffect(() => {
+    fadeUp('#achievements');
+  }, []);
   return (
     <section className={styles.section} id="achievements">
       <div className={styles.header}>

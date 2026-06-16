@@ -5,31 +5,35 @@ export default function HeroBackground() {
   const backgroundRef = useRef(null);
 
   useEffect(() => {
-    const move = e => {
-      const x = (e.clientX / window.innerWidth - 0.5) * 30;
-      const y = (e.clientY / window.innerHeight - 0.5) * 30;
+    const handleMove = e => {
+      if (!backgroundRef.current) return;
 
-      if (backgroundRef.current) {
-        backgroundRef.current.style.transform = `scale(1.08) translate(${x}px, ${y}px)`;
-      }
+      const x = (e.clientX / window.innerWidth - 0.5) * 20;
+      const y = (e.clientY / window.innerHeight - 0.5) * 20;
+
+      backgroundRef.current.style.transform = `
+        translate3d(${x}px, ${y}px, 0)
+        scale(1.12)
+      `;
     };
 
-    window.addEventListener('mousemove', move);
+    window.addEventListener('mousemove', handleMove);
 
-    return () => window.removeEventListener('mousemove', move);
+    return () => {
+      window.removeEventListener('mousemove', handleMove);
+    };
   }, []);
 
   return (
     <>
-      <div ref={backgroundRef} className={styles.background}>
-        <img src="/images/drone-shot/DroneShotImage.jpg" alt="Sherwood College" />
-      </div>
+      <img
+        ref={backgroundRef}
+        src="/images/drone-shot/DroneShotImage.jpg"
+        alt="Sherwood College"
+        className={styles.background}
+      />
 
-      <div className={styles.overlay} />
-
-      <div className={styles.gradient} />
-
-      <div className={styles.noise}></div>
+      <div className={styles.overlay}></div>
     </>
   );
 }
