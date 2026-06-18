@@ -3,9 +3,9 @@ import { testimonials } from '@/data/testimonials';
 import { useEffect } from 'react';
 import { stagger } from '@/animations';
 export default function Testimonials() {
-  useEffect(() => {
-    stagger('#testimonials');
-  }, []);
+  // useEffect(() => {
+  //   stagger('#testimonials');
+  // }, []);
   return (
     <section className={styles.section} id="testimonials">
       <div className={styles.header}>

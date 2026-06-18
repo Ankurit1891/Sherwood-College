@@ -4,9 +4,9 @@ import { campusExperience } from '@/data/campusExperience';
 import { useEffect } from 'react';
 import { stagger } from '@/animations';
 export default function CampusExperience() {
-  useEffect(() => {
-    stagger('#campus');
-  }, []);
+  // useEffect(() => {
+  //   stagger('#campus', `.${styles.card}`);
+  // }, []);
   return (
     <section className={styles.section} id="campus">
       <div className={styles.heading}>

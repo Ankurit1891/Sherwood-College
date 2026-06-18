@@ -4,9 +4,9 @@ import { useEffect } from 'react';
 import { stagger } from '@/animations';
 
 export default function Achievements() {
-  useEffect(() => {
-    stagger('#achievements', `.${styles.item}`);
-  }, []);
+  // useEffect(() => {
+  //   stagger('#achievements', `.${styles.item}`);
+  // }, []);
   return (
     <section className={styles.section} id="achievements">
       <div className={styles.header}>
