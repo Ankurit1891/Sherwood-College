@@ -1,5 +1,8 @@
 import styles from './Stats.module.css';
 
+import { useEffect } from 'react';
+import { stagger } from '@/animations';
+
 const stats = [
   {
     value: '1869',
@@ -21,8 +24,11 @@ const stats = [
 ];
 
 export default function Stats() {
+  useEffect(() => {
+    stagger(`.${styles.grid}`);
+  }, []);
   return (
-    <section className={styles.wrapper}>
+    <section className={styles.wrapper} id="stats">
       <div className={styles.container}>
         {stats.map(item => (
           <div key={item.label} className={styles.card}>

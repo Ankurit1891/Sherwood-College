@@ -1,32 +1,25 @@
-import { NavLink } from "react-router-dom";
-import { X } from "lucide-react";
+import { NavLink } from 'react-router-dom';
+import { X } from 'lucide-react';
 
-import styles from "./MobileMenu.module.css";
-import navbarLinks from "@/data/navbar";
+import styles from './MobileMenu.module.css';
+import navigation from '@/data/navigation';
 
 export default function MobileMenu({ open, onClose }) {
   return (
-    <aside
-      className={`${styles.menu} ${
-        open ? styles.open : ""
-      }`}
-    >
-      <button
-        className={styles.close}
-        onClick={onClose}
-      >
+    <aside className={`${styles.menu} ${open ? styles.open : ''}`}>
+      <button className={styles.close} onClick={onClose} aria-label="Close Menu">
         <X size={34} />
       </button>
 
       <nav>
-        {navbarLinks.map(link => (
+        {navigation.map(item => (
           <NavLink
-            key={link.path}
-            to={link.path}
+            key={item.path}
+            to={item.path}
             onClick={onClose}
-            className={styles.link}
+            className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`}
           >
-            {link.label}
+            {item.label}
           </NavLink>
         ))}
       </nav>

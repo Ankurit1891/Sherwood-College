@@ -1,11 +1,11 @@
 import styles from './Achievements.module.css';
 import { achievements } from '@/data/achievements';
 import { useEffect } from 'react';
-import { fadeUp } from '@/animations';
+import { stagger } from '@/animations';
 
 export default function Achievements() {
   useEffect(() => {
-    fadeUp('#achievements');
+    stagger('#achievements', `.${styles.item}`);
   }, []);
   return (
     <section className={styles.section} id="achievements">

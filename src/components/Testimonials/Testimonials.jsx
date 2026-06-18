@@ -1,10 +1,10 @@
 import styles from './Testimonials.module.css';
 import { testimonials } from '@/data/testimonials';
 import { useEffect } from 'react';
-import { fadeUp } from '@/animations';
+import { stagger } from '@/animations';
 export default function Testimonials() {
   useEffect(() => {
-    fadeUp('#testimonials');
+    stagger('#testimonials');
   }, []);
   return (
     <section className={styles.section} id="testimonials">

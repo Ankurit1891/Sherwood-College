@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
-import { fadeUp } from '@/animations';
+import { stagger } from '@/animations';
 
 export default function Gallery() {
   useEffect(() => {
-    fadeUp('#gallery');
+    stagger('#gallery');
   }, []);
   return (
-    <main style={{ padding: '120px 6%' }}>
+    <main style={{ padding: '120px 6%' }} id="gallery">
       <h1>Gallery</h1>
     </main>
   );

@@ -1,0 +1,98 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 80px;
+
+  width: 220px;
+  height: 100vh;
+
+  pointer-events: none;
+
+  z-index: 5;
+}
+
+.svg {
+  position: absolute;
+  inset: 0;
+
+  width: 220px;
+  height: 5000px;
+}
+
+.path {
+  fill: none;
+
+  stroke: #c8a96a;
+
+  stroke-width: 4;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+
+  filter: drop-shadow(0 0 12px rgba(200, 169, 106, 0.55));
+}
+
+.dot {
+  position: absolute;
+
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  background: #07130e;
+
+  border: 3px solid #c8a96a;
+
+  left: 141px;
+
+  transform: translate(-50%, -50%);
+}
+
+.dot span {
+  position: absolute;
+
+  left: 28px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  white-space: nowrap;
+
+  color: #c8a96a;
+
+  font-size: 0.75rem;
+
+  letter-spacing: 0.1rem;
+}
+
+.hero,
+.about,
+.campus,
+.academics,
+.student-life,
+.gallery,
+.admissions {
+  /* top is now set inline by Journey.jsx using each section's real offsetTop */
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    display: none;̀
+  }
+}
+
+.active {
+  background: #c8a96a;
+
+  box-shadow:
+    0 0 10px #c8a96a,
+    0 0 25px rgba(200, 169, 106, 0.8),
+    0 0 45px rgba(200, 169, 106, 0.6);
+
+  transform: translate(-50%, -50%) scale(1.4);
+
+  transition: all 0.35s ease;
+}

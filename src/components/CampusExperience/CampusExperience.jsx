@@ -2,10 +2,10 @@ import styles from './CampusExperience.module.css';
 import { ArrowUpRight } from 'lucide-react';
 import { campusExperience } from '@/data/campusExperience';
 import { useEffect } from 'react';
-import { fadeUp } from '@/animations';
+import { stagger } from '@/animations';
 export default function CampusExperience() {
   useEffect(() => {
-    fadeUp('#campus');
+    stagger('#campus');
   }, []);
   return (
     <section className={styles.section} id="campus">

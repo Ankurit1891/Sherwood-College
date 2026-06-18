@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
-import { fadeUp } from '@/animations';
+import { stagger } from '@/animations';
 export default function StudentLife() {
   useEffect(() => {
-    fadeUp('#student-life');
+    stagger('#student-life');
   }, []);
   return (
-    <main style={{ padding: '120px 6%' }}>
+    <main style={{ padding: '120px 6%' }} id="student-life">
       <h1>Student Life</h1>
     </main>
   );

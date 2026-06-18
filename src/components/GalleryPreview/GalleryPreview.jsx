@@ -18,14 +18,13 @@ export default function GalleryPreview() {
       <div className={styles.grid}>
         {galleryPreview.map(item => (
           <article key={item.title} className={styles.card}>
-            <div className={styles.placeholder}>
-              <h3>{item.title}</h3>
-
-              <small>{item.image}</small>
-            </div>
+            <img src={item.image} alt={item.title} className={styles.image} loading="lazy" />
 
             <div className={styles.overlay}>
-              <ArrowRight size={22} />
+              <div className={styles.info}>
+                <h3>{item.title}</h3>
+                <ArrowRight size={24} />
+              </div>
             </div>
           </article>
         ))}
